@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainPane" minHeight="700.0" prefHeight="605.0" prefWidth="994.0" style="-fx-background-color: #f0daf5;" stylesheets="@mainWindowStyleSheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poiupv.FXMLDocumentController">
+   <children>
+      <HBox alignment="CENTER_LEFT" fillHeight="false" spacing="100.0" style="-fx-background-color: #f0daf5;" VBox.vgrow="NEVER">
+         <children>
+            <Button fx:id="menuButton" mnemonicParsing="false" onAction="#sideMenuControl" prefHeight="26.0" prefWidth="58.0">
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../menuIcon2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="56.0" prefWidth="690.0" style="-fx-background-color: #f0daf5;">
+              <items>
+                <Button onAction="#selectTool" prefHeight="40.0" prefWidth="50.0" styleClass="tool-buttons" text="_Point" textAlignment="CENTER">
+                     <tooltip>
+                        <Tooltip text="Draw a Point" />
+                     </tooltip>
+                     <graphic>
+                        <Circle fill="#4b4b4b" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+                  <Button onAction="#selectTool" styleClass="tool-buttons" text="_Line">
+                     <tooltip>
+                        <Tooltip text="Draw a Line" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="icons-tool">
+                           <image>
+                              <Image url="@../toolbar%20icons/line_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+                  <Button onAction="#selectTool" styleClass="tool-buttons" text="_Arc">
+                     <tooltip>
+                        <Tooltip text="Draw an Arc" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="icons-tool">
+                           <image>
+                              <Image url="@../toolbar%20icons/arc_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+                  <Button onAction="#selectTool" styleClass="tool-buttons" text="_Text">
+                     <tooltip>
+                        <Tooltip text="Write Text" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../toolbar%20icons/text-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+                  <Button onAction="#selectTool" styleClass="tool-buttons" text="A_xis">
+                     <tooltip>
+                        <Tooltip text="Draw an Axis" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../toolbar%20icons/axis-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+                  <Button onAction="#selectTool" styleClass="tool-buttons" text="Protracto_r">
+                     <tooltip>
+                        <Tooltip text="Place Protractor" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../toolbar%20icons/protractor-icon.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+                  <Button fx:id="zoomOutButton" onAction="#zoomOut" styleClass="tool-buttons" text="_-">
+                     <tooltip>
+                        <Tooltip text="Zoom Out" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../toolbar%20icons/zoom-out-icon.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+                  <Button fx:id="zoomInButton" onAction="#zoomIn" styleClass="tool-buttons" text="_+">
+                     <tooltip>
+                        <Tooltip text="Zoom In" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../toolbar%20icons/zoom-in-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+                  <Button styleClass="tool-buttons" text="_Color / Grosor">
+                     <tooltip>
+                        <Tooltip text="Change Color/Grosor" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../toolbar%20icons/color-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+                  <Button onAction="#selectTool" styleClass="tool-buttons" text="_Delete">
+                     <tooltip>
+                        <Tooltip text="Delete Element" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../toolbar%20icons/erase-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+                  <Button onAction="#handleClean" styleClass="tool-buttons" text="_Clean">
+                     <tooltip>
+                        <Tooltip text="Clear Everything" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../toolbar%20icons/delete-all-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font></Button>
+              </items>
+            </ToolBar>
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <SplitPane fx:id="splitPaneMenu" dividerPositions="0.3" VBox.vgrow="ALWAYS">
+        <items>
+            <VBox fx:id="menuBox" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" style="-fx-background-color: #fcf4eb;" SplitPane.resizableWithParent="false" />
+            <VBox fx:id="map" SplitPane.resizableWithParent="false">
+               <children>
+                  <SplitPane VBox.vgrow="ALWAYS">
+                     <items>
+                        <ScrollPane fx:id="map_scrollpane" hbarPolicy="ALWAYS" pannable="true" prefHeight="398.0" prefWidth="358.0" vbarPolicy="ALWAYS">
+                           <content>
+                              <Pane onMouseClicked="#handleMouseClicked" onMouseDragged="#handleMouseDragged" onMouseMoved="#muestraPosicion" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased">
+                                 <children>
+                                    <ImageView pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../resources/carta_nautica.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <MenuButton fx:id="map_pin" mnemonicParsing="false" prefHeight="60.0" prefWidth="48.0" visible="false">
+                                       <items>
+                                          <MenuItem fx:id="pin_info" mnemonicParsing="false" text="Action 1" />
+                                       </items>
+                                       <styleClass>
+                                          <String fx:value="menu-button" />
+                                          <String fx:value="map-pin" />
+                                       </styleClass>
+                                    </MenuButton>
+                                 </children>
+                              </Pane>
+                           </content>
+                        </ScrollPane>
+                     </items>
+                  </SplitPane>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label fx:id="toolLabel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="200.0" text="Tool: " wrapText="true" HBox.hgrow="ALWAYS" />
+                        <Label fx:id="shortCutLabel" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" text="ShortCut:" wrapText="true" />
+                        <Label fx:id="posicion" minHeight="-Infinity" minWidth="-Infinity" text="SceneX:     ScenY:     " wrapText="true">
+                           <padding>
+                              <Insets right="100.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="12.0" left="20.0" right="12.0" top="6.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+        </items>
+      </SplitPane>
+   </children>
+</VBox>

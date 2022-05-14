@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="box" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poiupv.MenuLoggedInController">
+   <children>
+      <VBox fx:id="menu" alignment="TOP_CENTER" prefHeight="563.0" prefWidth="300.0" spacing="20.0" style="-fx-background-color: #fcf4eb;" stylesheets="@mainWindowStyleSheet.css">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="300.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#logOutFromAccount" prefHeight="38.0" prefWidth="94.0" text="Log Out" textFill="#cf2626">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../apagar-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="welcomeText" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome User">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <AnchorPane prefHeight="142.0" prefWidth="190.0">
+                     <children>
+                        <Circle fill="#def5da" layoutX="95.0" layoutY="71.0" radius="71.0" stroke="#a299ab" strokeType="INSIDE" strokeWidth="3.0" />
+                        <Circle fx:id="clip" fill="WHITE" layoutX="95.0" layoutY="71.0" radius="62.0" stroke="#a299ab" strokeType="OUTSIDE" strokeWidth="2.0" />
+                        <ImageView fx:id="avatar" fitHeight="132.0" fitWidth="124.0" layoutX="33.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/newAvatars/default.png" />
+                           </image>
+                        </ImageView>
+                        <Button id="edit-profile" layoutX="106.0" layoutY="85.0" maxHeight="46.0" maxWidth="124.0" minWidth="90.0" mnemonicParsing="false" onAction="#editProfile" prefHeight="46.0" prefWidth="124.0" text="Edit Profile" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../edit-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#viewResults" styleClass="menu-buttons" text="View Results" wrapText="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../results-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#makeProblem" prefHeight="87.0" prefWidth="162.0" styleClass="menu-buttons" text="Make Problem" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../problem-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,104 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 13 may. 2022, 1:59:25
+    Author     : Marta
+*/
+
+.menu-buttons {
+    -fx-padding: 8 15 15 15;
+    -fx-background-radius: 8;
+    -fx-background-color: #5B5F97;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75),4,0,0,1);
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-pref-width: 155px;
+    
+}
+
+.menu-buttons:hover {
+    -fx-background-color: #804e82;
+}
+
+.menu-buttons:pressed {
+     -fx-padding: 10 15 13 15;
+     -fx-background-insets: 2 0 0 0,2 0 3 0,2 0 4 0,2 0 5 0;
+}
+
+.tool-buttons{
+    -fx-min-width: 50;
+    -fx-max-width: 50;
+    -fx-min-height: 40;
+    -fx-max-height: 40;
+    -fx-text-fill: transparent;
+    -fx-padding: 0 0 0 5;
+    -fx-background-size: 30px;
+    -fx-wrap-text:true;
+}
+
+.icons-tool{
+    -fx-fit-width: 50px;
+    -fx-fit-height: 40px;
+}
+
+.transparent {
+    -fx-background-radius: 30;
+}
+
+#edit-profile{
+    -fx-min-width: 95;
+    -fx-max-width: 95;
+    -fx-min-height: 45;
+    -fx-max-height: 45;
+    -fx-background-radius: 8;
+    -fx-background-color: #a299ab;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: white;
+    -fx-wrap-text: true;
+}
+#edit-profile:hover{
+    -fx-background-color: #aba399;
+}
+
+.tooltip{
+    -fx-font-size: 12px;
+    -fx-text-fill: black;
+    -fx-background-color: white;
+    -fx-opacity: 0.8;
+}
+
+#selectButton{
+    -fx-pref-width: 140px;
+}
+
+#randomButton{
+    -fx-wrap-text:true;
+}
+
+.labels{
+    -fx-fill: #7E3F8F;
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3),4,0,0,1);
+}
+.radio-button {
+    -fx-font-size: 15px;
+}
+.radio-button .radio {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 15px;
+}
+.radio-button:selected .radio .dot{
+    -fx-background-color: #5B5F97;
+    -fx-background-insets: 0;
+}
+
+.text-area {
+    -fx-font-size: 12px;
+    -fx-font-weight:bold;
+}
